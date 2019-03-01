@@ -159,13 +159,14 @@ def run(project, bucket, dataset):
    pipeline.run()
 
 if __name__ == '__main__':
-   import argparse
-   parser = argparse.ArgumentParser(description='Run pipeline on the cloud')
-   parser.add_argument('-p','--project', help='Unique project ID', required=True)
-   parser.add_argument('-b','--bucket', help='Bucket where your data were ingested in Chapter 2', required=True)
-   parser.add_argument('-d','--dataset', help='BigQuery dataset', default='flights')
-   args = vars(parser.parse_args())
+   # import argparse
+   # parser = argparse.ArgumentParser(description='Run pipeline on the cloud')
+   # parser.add_argument('-p','--project', help='Unique project ID', required=True)
+   # parser.add_argument('-b','--bucket', help='Bucket where your data were ingested in Chapter 2', required=True)
+   # parser.add_argument('-d','--dataset', help='BigQuery dataset', default='flights')
+   # args = vars(parser.parse_args())
 
-   print "Correcting timestamps and writing to BigQuery dataset {}".format(args['dataset'])
+   # print "Correcting timestamps and writing to BigQuery dataset {}".format(args['dataset'])
   
-   run(project=args['project'], bucket=args['bucket'], dataset=args['dataset'])
+   run(project='testinggcpdatatooling', bucket='testing-gcp-data-tooling-caserta', dataset='flights')
+# python df06.py --project=testinggcpdatatooling --bucket=testing-gcp-data-tooling-caserta --dataset=flights

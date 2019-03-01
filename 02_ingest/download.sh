@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export YEAR=${YEAR:=2015}
+export YEAR=${YEAR:=2018}
 echo "Downloading YEAR=$YEAR..."
 
 for MONTH in `seq -w 1 12`; do
